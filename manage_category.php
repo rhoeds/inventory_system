@@ -16,7 +16,7 @@
 					<!-- Modules Dropdown -->
 					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Modules <span class = "caret"></span></a>
 						<ul class = "dropdown-menu">								
-							<li><a href = "manage_category.php"><span class = "glyphicon glyphicon-cog"></span> Modules</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Manage Category</a></li>
 							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Edit Category</a></li>
 					 	</ul>
 			  		</li>
@@ -35,14 +35,24 @@
 					</ul>
 			</div>
 		</nav>
-		
-<div class = "container">
-	<div class = "page-header">
-		<h2>Admin Dashboard</h2>
-	</div>		
-</div>
 	<body>
-		
+		<div class = "container">
+			<div class = "page-header">
+				<h2>Category listing</h2>
+			</div>
+			<div class = "row">
+				<div class = "col-sm-6">
+					<div class = "panel panel-default">
+						<div class = "panel-heading">
+							<h4>Add Category</h4>
+						</div>
+						<div class = "panel-body">
+
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
 	</body>
 
 		<?php include 'includes/components/footer.php' ?>
