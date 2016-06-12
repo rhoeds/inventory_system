@@ -17,7 +17,8 @@
 					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Modules <span class = "caret"></span></a>
 						<ul class = "dropdown-menu">								
 							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Manage Category</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Edit Category</a></li>
+							<li><a href = "functions/add_product.php"><span class = "glyphicon glyphicon-plus"></span> Add Category</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-pencil"></span> Edit Category</a></li>
 					 	</ul>
 			  		</li>
 
