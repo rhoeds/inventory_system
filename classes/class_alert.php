@@ -12,6 +12,17 @@
 			return $alert;
 		}
 
-		public function 
+		public function loginFailed() {
+			$alert = '
+				<div class = "alert alert-danger alert-dismissible" role = "alert">
+					<button type = "button" class = "close" data-dismiss = "alert" aria-label = "Close">
+						<span area-hidden = "true">&times;</span>
+					</button>
+					<Strong>Account is Locked</Strong> Login Failed. Please check your username or password.
+				</div>
+			';
+			return $alert;
+		}
+
 	}
 ?>

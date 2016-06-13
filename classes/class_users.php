@@ -1,6 +1,6 @@
 <?php 
 	include_once 'class_MYSQLI_connection.php';
-	class Users extends MYSQLI_connection{
+	class Users extends MYSQLI_connection {
 		//local variables for checking login conditions
 		public $id;
 		public $username;
@@ -79,6 +79,12 @@
 			return $success;
 		}
 
-		
+		public function regUser($username, $password, $fname) {
+			$success = false;
+			$password = md5($password);
+			$sql = "INSERT INTO tbl_account SET username = '$username', pwd = '$password', full_name ='$fname', ";
+			
+			return $sql;
+		}		
 	}
 ?>

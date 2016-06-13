@@ -39,7 +39,7 @@
 								unset($_SESSION['alert'])
 							?>
 							<!-- Login Form -->
-							<form action = "#" method = "post">
+							<form action = "processes/pr_login.php" method = "post">
 								<div class = "form-group">
 									<label>Username:</label>
 									<input type = "text" required = "username" class = "form-control" placeholder = "Username" name = "username">
@@ -56,7 +56,7 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div><br /><br />	
 		<?php include 'includes/components/footer.php' ?>
 	</body>
 </html>

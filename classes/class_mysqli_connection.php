@@ -1,12 +1,12 @@
 <?php 
-	class MYSQLI_connection{
+	class MYSQLI_connection {
 		private $hostname;
 		private $port;
 		private $userID;
 		private $pwd;
 		private $db;
 		private $err;
-		private $con;
+		public $con;
 
 			public function connect($prHost = "localhost", $prPort = "3306", $prUser = "root", $prPass = "", $prDB = "db_capstone"){
 				$success = false;
@@ -52,7 +52,7 @@
 				if (get_magic_quotes_gpc()) {
 					$input(stripslashes($input)); //removes slashes
 				}
-				return $this->con->cubrid_real_escape_string($input); //removes and escapes single qoutes
+				return $this->con->real_escape_string($input); //removes and escapes single qoutes
 			}
 
 			public function closeConnection(){
