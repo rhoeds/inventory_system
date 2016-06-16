@@ -16,9 +16,9 @@
 					<!-- Modules Dropdown -->
 					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Modules <span class = "caret"></span></a>
 						<ul class = "dropdown-menu">								
-							<li><a href = "manage_category.php"><span class = "glyphicon glyphicon-cog"></span> Modules</a></li>
+							<li><a href = "manage_category.php"><span class = "glyphicon glyphicon-cog"></span> Add Brand</a></li>
 							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Category</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Edit Category</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span>  Add Product</a></li>
 					 	</ul>
 			  		</li>
 
@@ -36,13 +36,12 @@
 					</ul>
 			</div>
 		</nav>
-		
-<div class = "container">
-	<div class = "page-header">
-		<h2>Admin Dashboard</h2>
-	</div>		
-</div>
-	<body>
+	<body>	
+		<div class = "container">
+			<div class = "page-header">
+				<h2>Admin Dashboard</h2>
+			</div>		
+		</div>
 		
 	</body>
 

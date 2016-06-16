@@ -16,11 +16,20 @@
 		<title>DRC Inventory System</title>
 		
 		<script>
-			$(document).ready(function(){
-				$('#btAdd').click(function(){
-					alert("Pogi nmn tayo");
+
+			/*$(document).ready(function(){
+				$('#btnAdd').click(function(){
+					$.ajax({
+						type: 'POST',
+						url: '../processes/product_process.php',
+						data: {operation:1},
+						dataType: 'html',
+						success: function(response){
+							$('#modal_container').html(response);
+						}
+					});
 				});
-			});
+			});*/
 		</script>
 	</head>
 		<nav class = "navbar navbar-default">
@@ -31,10 +40,12 @@
 				<ul class = "nav navbar-nav">
 					<!-- Modules Dropdown -->
 					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Modules <span class = "caret"></span></a>
+					
 						<ul class = "dropdown-menu">								
-							<li><a href = "../manage_category.php"><span class = "glyphicon glyphicon-cog"></span> Manage Category</a></li>
+							<li><a href = "../manage_category.php"><span class = "glyphicon glyphicon-cog"></span> Manage Modules</a></li>
 							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Category</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-pencil"></span> Edit Category</a></li>
+							<li><a href = "functions/add_product.php"><span class = "glyphicon glyphicon-plus"></span> Add Product</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Brand</a></li>
 					 	</ul>
 			  		</li>
 
@@ -42,7 +53,7 @@
 					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Orders <span class = "caret"></span></a>
 						<ul class = "dropdown-menu">
 							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Manage Orders</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Edit Orders</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Orders</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -65,7 +76,7 @@
 						</div>
 						<div class = "panel-body">
 							<!-- for adding products -->
-							<form action = "../processes/pr_add_item.php" method = "post">
+							<form action = "../processes/pr_add_item.php" method = "POST">
 								<div class = "form-group">
 									<label>Item Name:</label>
 									<input type = "text" class = "form-control" placeholder = "Item name" name = "item_name">
@@ -86,7 +97,7 @@
 									<input type = "text" class = "form-control" placeholder = "Location" name = "location">
 								</div>
 								<div>
-									<button class = "btn btn-primary pull-right" name = "btnAdd">Add Product</button>
+									<button class = "btn btn-primary pull-right" id = "btnAdd">Add Product</button>
 								</div>
 							</form>
 						</div>

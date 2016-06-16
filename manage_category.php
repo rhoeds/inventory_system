@@ -16,9 +16,10 @@
 					<!-- Modules Dropdown -->
 					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Modules <span class = "caret"></span></a>
 						<ul class = "dropdown-menu">								
-							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Manage Category</a></li>
-							<li><a href = "functions/add_product.php"><span class = "glyphicon glyphicon-plus"></span> Add Category</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-pencil"></span> Edit Category</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Manage Modules</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Category</a></li>
+							<li><a href = "functions/add_product.php"><span class = "glyphicon glyphicon-plus"></span> Add Product</a></li>
+							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Brand</a></li>
 					 	</ul>
 			  		</li>
 
@@ -32,7 +33,7 @@
 				</ul>
 					<!-- Logout Dropdown -->	
 					<ul class = "nav navbar-nav pull-right">
-						<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#"><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>				
+						<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "../index.php"><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>				
 					</ul>
 			</div>
 		</nav>
