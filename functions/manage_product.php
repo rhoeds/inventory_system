@@ -1,10 +1,12 @@
 <?php 
 	session_start();
+	include_once '../classes/class_product.php';
+	$product = new Product();
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<!DOCTYPE html>
+		<!DOCTYPE html>	
 		<html lang = "en">
 		<meta charset = "utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,49 +16,57 @@
 		<script src = "../libs/jquery-1.11.3.min.js"></script>
 		<script src = "../libs/bootstrap/js/bootstrap.min.js"></script>
 		<title>DRC Inventory System</title>
-		
-		<script>
 
-			/*$(document).ready(function(){
-				$('#btnAdd').click(function(){
+		<!-- Css for the forms -->
+		<style>
+			#addProduct {
+				margin-left: 0px;
+			}
+		</style>
+
+		<!-- Javascripts for functionlity -->
+		<script>
+			$(document).ready(function(){
+				$('#addProduct').click(function(){
+					var a = "meron nga";
 					$.ajax({
 						type: 'POST',
 						url: '../processes/product_process.php',
-						data: {operation:1},
+						data: {operation:1, b:a},
 						dataType: 'html',
 						success: function(response){
 							$('#modal_container').html(response);
 						}
 					});
 				});
-			});*/
+			});
 		</script>
 	</head>
 		<nav class = "navbar navbar-default">
 			<div class = "container">
 				<div class = "navbar-header">
-					<a class = "navbar-brand" href = "#">Inventory Management</a>
+					<a class = "navbar-brand" href = "#">Dashboard</a>
 				</div>
-				<ul class = "nav navbar-nav">
-					<!-- Modules Dropdown -->
-					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Modules <span class = "caret"></span></a>
-					
-						<ul class = "dropdown-menu">								
-							<li><a href = "../manage_category.php"><span class = "glyphicon glyphicon-cog"></span> Manage Modules</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Category</a></li>
-							<li><a href = "functions/add_product.php"><span class = "glyphicon glyphicon-plus"></span> Add Product</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Brand</a></li>
-					 	</ul>
-			  		</li>
+					<ul class = "nav navbar-nav">
+						<!-- Modules Dropdown -->
+						<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Modules <span class = "caret"></span></a>
+						
+							<ul class = "dropdown-menu">								
+								<li><a href = "manage_product.php"><span class = "glyphicon glyphicon-cog"></span> Inventory</a></li>
+								<li><a href = "manage_category.php"><span class = "glyphicon glyphicon-cog"></span> Manage Category</a></li>
+								<li><a href = "functions/add_product.php"><span class = "glyphicon glyphicon-cog"></span> Add Brand</a></li>
+								<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Brand</a></li>
+						 	</ul>
+				  		</li>
 
-					<!-- Orders Dropdown -->
-					<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Orders <span class = "caret"></span></a>
-						<ul class = "dropdown-menu">
-							<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Manage Orders</a></li>
-							<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Orders</a></li>
-						</ul>
-					</li>
-				</ul>
+						<!-- Orders Dropdown -->
+						<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Orders <span class = "caret"></span></a>
+							<ul class = "dropdown-menu">
+								<li><a href = "#"><span class = "glyphicon glyphicon-cog"></span> Manage Orders</a></li>
+								<li><a href = "#"><span class = "glyphicon glyphicon-plus"></span> Add Orders</a></li>
+							</ul>
+						</li>
+					</ul>
 					<!-- Logout Dropdown -->	
 					<ul class = "nav navbar-nav pull-right">
 						<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#"><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>				
@@ -65,6 +75,34 @@
 		</nav>
 	<body>
 		<div class = "container">
+			<span><h3>DashBoard</h3><hr>  
+			<div class = "row">
+				<div class = "col-sm-4">
+					<div class = "panel panel-primary">
+						<div class = "panel-heading">
+							<h3 class = "panel-title">Inventory Management</h3>
+						</div>
+						<div class = "panel-body">
+							<button id = "addProduct" class="btn btn-success"><span class = "glyphicon glyphicon-plus"></span> Add Product</button><hr>
+							
+						</div>	 
+					</div>
+				</div>
+				<div class = "col-sm-8">
+					<div class = "panel panel-success">
+						<div class = "panel-heading">
+							<h3 class = "panel-title">Inventory Stock</h3>
+						</div>
+						<div class = "panel-body">
+							<?php 
+								echo $product->$_SESSION['userID'];		
+							?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class = "container">
 			<div class = "page-header">
 				<h2>Add Product</h2>
 			</div>
@@ -75,7 +113,7 @@
 							<h4><span class = " glyphicon glyphicon-edit"></span> Add Product</h4>
 						</div>
 						<div class = "panel-body">
-							<!-- for adding products -->
+							 for adding products 
 							<form action = "../processes/pr_add_item.php" method = "POST">
 								<div class = "form-group">
 									<label>Item Name:</label>
@@ -104,7 +142,7 @@
 					</div>
 				</div>
 			</div>		
-		</div>
+		</div> -->
 	</body>
 	<footer>
 		<div  class = "navbar navbar-inverse">

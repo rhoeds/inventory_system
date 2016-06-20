@@ -8,7 +8,7 @@
 		private $err;
 		public $con;
 
-			public function connect($prHost = "localhost", $prPort = "3306", $prUser = "root", $prPass = "", $prDB = "db_capstone"){
+			public function connect($prHost = "localhost", $prPort = "3306", $prUser = "root", $prPass = "", $prDB = "db_ims"){
 				$success = false;
 				$this->hostname = $prHost;
 				$this->userID = $prUser;

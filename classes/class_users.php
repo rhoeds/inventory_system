@@ -12,7 +12,7 @@
 		//Functions for checking username & password
 		public function searchUser($prUsername){
 			$success = false;
-			$qry = "SELECT * FROM tbl_account WHERE username = '$prUsername';";
+			$qry = "SELECT * FROM tbl_userinfos WHERE username = '$prUsername';";
 			$result = $this->con->query($qry);
 			if ($result){
 				//checking result
@@ -22,8 +22,6 @@
 					$this->id = $row ['username'];
 					$this->username = $row ['username'];
 					$this->pwd = $row ['pwd'];
-					$this->retries = $row ['retries'];
-					//$this->userType = $row ['user_type'];
 				}
 			}else{
 				$this->showError(3,0);

@@ -1,11 +1,18 @@
 <?php 
+	session_start();
+	require_once '../classes/class_users.php';
+	require_once '../classes/class_mysqli_connection.php';
 
-	$op = $_POST['operation'];
+	if(isset($_POST['operation'])){
 
-	if($op==1){
-		$helperType = 1;
-		if(isset($_POST['btnAdd'])){
-			echo "it works \m/";
+		$con = new MYSQLI_connection();
+
+		$op = $_POST['operation'];
+
+		if($op==1){
+			echo "meron na dito";
+
 		}
 	}
+
 ?>
