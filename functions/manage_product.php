@@ -88,20 +88,24 @@
 						</div>	 
 					</div>
 				</div>
-				<div class = "col-sm-8">
+				<div class = "col-sm-12">
 					<div class = "panel panel-success">
 						<div class = "panel-heading">
 							<h3 class = "panel-title">Inventory Stock</h3>
 						</div>
 						<div class = "panel-body">
 							<?php 
-								echo $product->$_SESSION['userID'];		
+								$product = new Product();
+								$product->loadProductItem();
 							?>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<form action = "../processes/product_process.php">
+			<div id = "modal_container"> </div>
+		</form>
 		<!-- <div class = "container">
 			<div class = "page-header">
 				<h2>Add Product</h2>
